@@ -142,6 +142,7 @@
     <ClCompile Include="Dependancies\ImGUI\imgui_tables.cpp" />
     <ClCompile Include="Dependancies\ImGUI\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TextFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dependancies\GLFW\include\GLFW\glfw3.h" />
