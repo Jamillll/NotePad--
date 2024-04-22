@@ -133,11 +133,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dependancies\ImGUI\imgui.cpp" />
+    <ClCompile Include="Dependancies\ImGUI\imgui_demo.cpp" />
+    <ClCompile Include="Dependancies\ImGUI\imgui_draw.cpp" />
+    <ClCompile Include="Dependancies\ImGUI\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Dependancies\ImGUI\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="Dependancies\ImGUI\imgui_stdlib.cpp" />
+    <ClCompile Include="Dependancies\ImGUI\imgui_tables.cpp" />
+    <ClCompile Include="Dependancies\ImGUI\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dependancies\GLFW\include\GLFW\glfw3.h" />
     <ClInclude Include="Dependancies\GLFW\include\GLFW\glfw3native.h" />
+    <ClInclude Include="Dependancies\ImGUI\imconfig.h" />
+    <ClInclude Include="Dependancies\ImGUI\imgui.h" />
+    <ClInclude Include="Dependancies\ImGUI\imgui_impl_glfw.h" />
+    <ClInclude Include="Dependancies\ImGUI\imgui_impl_opengl3.h" />
+    <ClInclude Include="Dependancies\ImGUI\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="Dependancies\ImGUI\imgui_internal.h" />
+    <ClInclude Include="Dependancies\ImGUI\imgui_stdlib.h" />
+    <ClInclude Include="Dependancies\ImGUI\imstb_rectpack.h" />
+    <ClInclude Include="Dependancies\ImGUI\imstb_textedit.h" />
+    <ClInclude Include="Dependancies\ImGUI\imstb_truetype.h" />
     <ClInclude Include="TextFile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
