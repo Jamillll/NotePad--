@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
     if (!glfwInit())
         return -1;
 
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(640, 480, "Notepad--", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -28,18 +28,24 @@ int main(int argc, char* argv[])
 
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
-    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-    io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+    io.ConfigFlags |= ImGuiWindowFlags_NoTitleBar;
+    io.ConfigFlags |= ImGuiWindowFlags_NoMove;
+    io.ConfigFlags |= ImGuiWindowFlags_NoResize;
+    io.ConfigFlags |= ImGuiWindowFlags_NoCollapse;
+    io.ConfigFlags |= ImGuiWindowFlags_NoBringToFrontOnFocus;
+    io.ConfigFlags |= ImGuiWindowFlags_NoBackground;
+
     ImGui::StyleColorsDark();
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
 
+    file.GetContent();
+
     bool showDemoWindow = false;
     while (!glfwWindowShouldClose(window))
     {
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glfwPollEvents();
 
         // Start the Dear ImGui frame
@@ -50,8 +56,14 @@ int main(int argc, char* argv[])
         if (showDemoWindow)
             ImGui::ShowDemoWindow(&showDemoWindow);
 
-        ImGui::Begin("Notepad--");
-        ImGui::Text("Hello World");
+        ImGui::SetNextWindowSize(ImVec2(io.DisplaySize.x, io.DisplaySize.y));
+        ImGui::SetNextWindowPos(ImVec2(0, 0));
+
+        ImGui::Begin("Notepad--", nullptr, io.ConfigFlags);
+        ImGui::Text(file.GetContent().c_str());
+
+        //!!!!ImGui demo line 1541 for multiline text!!!!
+
         if (ImGui::Button("Show Demo Window"))
         {
             showDemoWindow = true;
@@ -61,17 +73,6 @@ int main(int argc, char* argv[])
         // Rendering
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-        // Update and Render additional Platform Windows
-        // (Platform functions may change the current OpenGL context, so we save/restore it to make it easier to paste this code elsewhere.
-        //  For this specific demo app we could also call glfwMakeContextCurrent(window) directly)
-        if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
-        {
-            GLFWwindow* backup_current_context = glfwGetCurrentContext();
-            ImGui::UpdatePlatformWindows();
-            ImGui::RenderPlatformWindowsDefault();
-            glfwMakeContextCurrent(backup_current_context);
-        }
 
         glfwSwapBuffers(window);
     }
