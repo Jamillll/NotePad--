@@ -1,9 +1,11 @@
 #include <iostream>
 #include "TextFile.h"
 #include <GLFW/glfw3.h>
+
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
+#include "imgui_stdlib.h"
 
 int main(int argc, char* argv[])
 {
@@ -36,13 +38,12 @@ int main(int argc, char* argv[])
     io.ConfigFlags |= ImGuiWindowFlags_NoBackground;
 
     ImGui::StyleColorsDark();
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1, 1));
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
 
-    file.GetContent();
-
-    bool showDemoWindow = false;
+    string contents = file.GetContent();
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -53,22 +54,19 @@ int main(int argc, char* argv[])
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        if (showDemoWindow)
-            ImGui::ShowDemoWindow(&showDemoWindow);
 
         ImGui::SetNextWindowSize(ImVec2(io.DisplaySize.x, io.DisplaySize.y));
         ImGui::SetNextWindowPos(ImVec2(0, 0));
 
         ImGui::Begin("Notepad--", nullptr, io.ConfigFlags);
-        ImGui::Text(file.GetContent().c_str());
-
-        //!!!!ImGui demo line 1541 for multiline text!!!!
-
-        if (ImGui::Button("Show Demo Window"))
-        {
-            showDemoWindow = true;
-        }
+        ImGui::InputTextMultiline("##Contents", &contents, ImVec2(io.DisplaySize.x, io.DisplaySize.y - 20));
         ImGui::End();
+
+
+        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) && glfwGetKey(window, GLFW_KEY_S))
+        {
+            file.CommitContent(contents);
+        }
 
         // Rendering
         ImGui::Render();

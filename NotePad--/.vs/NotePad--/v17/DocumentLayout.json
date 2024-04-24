@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\TextFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:TextFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\Dependancies\\ImGUI\\imgui_stdlib.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:Dependancies\\ImGUI\\imgui_stdlib.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\Dependancies\\ImGUI\\imgui_demo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:Dependancies\\ImGUI\\imgui_demo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\TextFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:TextFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\TextFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:TextFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MJMis\\Downloads\\imgui-docking\\imgui-docking\\examples\\example_glfw_opengl3\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -39,7 +43,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAEAAAAA5AAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD4AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2023-12-18T19:43:54.525Z",
               "IsPinned": true,
@@ -51,7 +55,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "imgui_stdlib.h",
+              "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Dependancies\\ImGUI\\imgui_stdlib.h",
+              "RelativeDocumentMoniker": "Dependancies\\ImGUI\\imgui_stdlib.h",
+              "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\Dependancies\\ImGUI\\imgui_stdlib.h",
+              "RelativeToolTip": "Dependancies\\ImGUI\\imgui_stdlib.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-23T23:20:30.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TextFile.h",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\TextFile.h",
               "RelativeDocumentMoniker": "TextFile.h",
@@ -64,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TextFile.cpp",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\TextFile.cpp",
               "RelativeDocumentMoniker": "TextFile.cpp",
@@ -72,12 +89,11 @@
               "RelativeToolTip": "TextFile.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-22T23:05:53.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T23:05:53.912Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "imgui_demo.cpp",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Dependancies\\ImGUI\\imgui_demo.cpp",
               "RelativeDocumentMoniker": "Dependancies\\ImGUI\\imgui_demo.cpp",
@@ -90,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\MJMis\\Downloads\\imgui-docking\\imgui-docking\\examples\\example_glfw_opengl3\\main.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\MJMis\\Downloads\\imgui-docking\\imgui-docking\\examples\\example_glfw_opengl3\\main.cpp",
