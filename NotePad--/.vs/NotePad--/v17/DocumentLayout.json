@@ -43,7 +43,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD4AAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2023-12-18T19:43:54.525Z",
               "IsPinned": true,
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Dependancies\\ImGUI\\imgui_stdlib.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-23T23:20:30.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T23:20:30.283Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "TextFile.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2023-12-18T19:49:52.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-12-18T19:49:52.879Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "Dependancies\\ImGUI\\imgui_demo.cpp",
               "ViewState": "AQIAAAAGAAAAAAAAAAAAAAkGAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-22T22:48:50.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T22:48:50.545Z"
             },
             {
               "$type": "Document",
