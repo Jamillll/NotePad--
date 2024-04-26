@@ -1,7 +1,5 @@
 #include "TextManager.h"
 
-#include <iostream>
-
 #include <windows.h>
 #include <commdlg.h>
 #define GLFW_EXPOSE_NATIVE_WIN32
@@ -43,6 +41,8 @@ void TextManager::SaveContent(GLFWwindow* window)
 		ofn.nMaxFile = sizeof(szFile);
 		if (GetCurrentDirectoryA(256, currentDir))
 			ofn.lpstrInitialDir = currentDir;
+		ofn.lpstrFilter = "Text File (*.txt)\0*.txt\0";
+		ofn.nFilterIndex = 1;
 		ofn.Flags = OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT | OFN_NOCHANGEDIR;
 
 		if (GetSaveFileNameA(&ofn) == true)
