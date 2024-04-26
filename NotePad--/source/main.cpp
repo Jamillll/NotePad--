@@ -8,9 +8,15 @@
 #include "imgui_impl_opengl3.h"
 #include "imgui_stdlib.h"
 
+GLFWwindow* SetupWindow(ImGuiIO& io); // check below main
+
 int main(int argc, char* argv[])
 {
-    using namespace std;
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO();
+    GLFWwindow* window = SetupWindow(io);
+
+    if (window == nullptr) return -1;
 
     TextManager textManager;
 
@@ -19,35 +25,6 @@ int main(int argc, char* argv[])
         TextFile* file = new TextFile(argv[1]);
         textManager.OpenFile(file);
     }
-
-    GLFWwindow* window;
-
-    if (!glfwInit())
-        return -1;
-
-    window = glfwCreateWindow(640, 480, "Notepad--", NULL, NULL);
-    if (!window)
-    {
-        glfwTerminate();
-        return -1;
-    }
-
-    glfwMakeContextCurrent(window);
-
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO();
-    io.ConfigFlags |= ImGuiWindowFlags_NoTitleBar;
-    io.ConfigFlags |= ImGuiWindowFlags_NoMove;
-    io.ConfigFlags |= ImGuiWindowFlags_NoResize;
-    io.ConfigFlags |= ImGuiWindowFlags_NoCollapse;
-    io.ConfigFlags |= ImGuiWindowFlags_NoBringToFrontOnFocus;
-    io.ConfigFlags |= ImGuiWindowFlags_NoBackground;
-
-    ImGui::StyleColorsDark();
-    ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1, 1));
-
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 330");
 
     while (!glfwWindowShouldClose(window))
     {
@@ -58,7 +35,6 @@ int main(int argc, char* argv[])
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-
 
         ImGui::SetNextWindowSize(ImVec2(io.DisplaySize.x, io.DisplaySize.y));
         ImGui::SetNextWindowPos(ImVec2(0, 0));
@@ -81,4 +57,34 @@ int main(int argc, char* argv[])
 
     glfwTerminate();
     return 0;
+}
+
+GLFWwindow* SetupWindow(ImGuiIO& io)
+{
+    if (!glfwInit())
+        return nullptr;
+
+    GLFWwindow* window = glfwCreateWindow(640, 480, "Notepad--", NULL, NULL);
+    if (!window)
+    {
+        glfwTerminate();
+        return nullptr;
+    }
+
+    glfwMakeContextCurrent(window);
+
+    io.ConfigFlags |= ImGuiWindowFlags_NoTitleBar;
+    io.ConfigFlags |= ImGuiWindowFlags_NoMove;
+    io.ConfigFlags |= ImGuiWindowFlags_NoResize;
+    io.ConfigFlags |= ImGuiWindowFlags_NoCollapse;
+    io.ConfigFlags |= ImGuiWindowFlags_NoBringToFrontOnFocus;
+    io.ConfigFlags |= ImGuiWindowFlags_NoBackground;
+
+    ImGui::StyleColorsDark();
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1, 1));
+
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
+
+    return window;
 }
