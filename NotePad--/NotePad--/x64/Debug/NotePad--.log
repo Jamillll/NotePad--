@@ -1,2 +1,10 @@
-﻿  main.cpp
+﻿  TextManager.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+  (compiling source file 'source/TextManager.cpp')
+  C:\Programs\NotePad--\NotePad--\Dependancies\GLFW\include\GLFW\glfw3.h(123,1):
+  see previous definition of 'APIENTRY'
+  
+C:\Programs\NotePad--\NotePad--\source\TextManager.cpp(48,33): warning C4805: '==': unsafe mix of type 'BOOL' and type 'bool' in operation
+  main.cpp
+  Generating Code...
   NotePad--.vcxproj -> C:\Programs\NotePad--\NotePad--\x64\Debug\NotePad--.exe
