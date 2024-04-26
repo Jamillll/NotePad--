@@ -10,6 +10,7 @@ private:
 public:
 	TextFile(std::string inputPath);
 
+	std::string GetPath();
 	std::string GetContent();
 
 	void CommitContent(std::string* content);

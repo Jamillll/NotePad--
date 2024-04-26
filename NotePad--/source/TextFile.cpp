@@ -5,6 +5,11 @@ TextFile::TextFile(std::string inputPath)
 	m_Path = inputPath;
 }
 
+std::string TextFile::GetPath()
+{
+	return m_Path;
+}
+
 std::string TextFile::GetContent()
 {
 	std::fstream file(m_Path);

@@ -1,5 +1,8 @@
 #include "TextManager.h"
 
+#include <sstream>
+#include <vector>
+
 #include <windows.h>
 #include <commdlg.h>
 #define GLFW_EXPOSE_NATIVE_WIN32
@@ -13,6 +16,24 @@ TextManager::TextManager(TextFile* inputFile)
 
 TextManager::TextManager()
 {
+}
+
+std::string TextManager::GetFileName()
+{
+	if (m_TextFile == nullptr) return "";
+
+	std::string filePath = m_TextFile->GetPath();
+	std::string output;
+
+	std::stringstream stringStream(filePath);
+	std::vector<std::string> strings;
+
+	while (getline(stringStream, output, '\\'))
+	{
+		strings.push_back(output);
+	}
+
+	return strings[strings.size() - 1];
 }
 
 void TextManager::OpenFile(TextFile* inputFile)

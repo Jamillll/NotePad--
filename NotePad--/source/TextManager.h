@@ -13,6 +13,8 @@ public:
 	TextManager(TextFile* inputFile);
 	TextManager();
 
+	std::string GetFileName();
+
 	void OpenFile(TextFile* inputFile);
 	void SaveContent(GLFWwindow* window);
 

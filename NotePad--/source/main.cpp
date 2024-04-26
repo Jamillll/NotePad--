@@ -48,6 +48,14 @@ int main(int argc, char* argv[])
             textManager.SaveContent(window);
         }
 
+        std::string fileName = textManager.GetFileName();
+
+        if (!fileName.empty())
+        {
+            glfwSetWindowTitle(window, fileName.c_str());
+        }
+        else glfwSetWindowTitle(window, "Notepad--");
+
         // Rendering
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
