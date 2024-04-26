@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "source\\main.cpp",
               "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\source\\main.cpp",
               "RelativeToolTip": "source\\main.cpp",
-              "ViewState": "AQIAACEAAAAAAAAAAAArwDEAAAAAAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-26T00:30:30.474Z",
               "IsPinned": true,
@@ -60,8 +60,7 @@
               "RelativeToolTip": "source\\TextManager.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-26T00:32:09.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T00:32:09.211Z"
             },
             {
               "$type": "Document",
@@ -73,8 +72,7 @@
               "RelativeToolTip": "source\\TextManager.cpp",
               "ViewState": "AQIAABMAAAAAAAAAAAAAABkAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-26T00:44:09.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T00:44:09.381Z"
             },
             {
               "$type": "Document",
@@ -86,8 +84,7 @@
               "RelativeToolTip": "source\\TextFile.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-26T00:33:24.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T00:33:24.636Z"
             },
             {
               "$type": "Document",
@@ -99,8 +96,7 @@
               "RelativeToolTip": "source\\TextFile.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-26T00:55:29.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-26T00:55:29.119Z"
             }
           ]
         }

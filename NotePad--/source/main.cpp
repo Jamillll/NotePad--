@@ -50,11 +50,11 @@ int main(int argc, char* argv[])
 
         std::string fileName = textManager.GetFileName();
 
-        if (!fileName.empty())
+        if (fileName.empty())
         {
-            glfwSetWindowTitle(window, fileName.c_str());
+            glfwSetWindowTitle(window, "Notepad--");
         }
-        else glfwSetWindowTitle(window, "Notepad--");
+        else glfwSetWindowTitle(window, fileName.c_str());
 
         // Rendering
         ImGui::Render();
@@ -87,6 +87,9 @@ GLFWwindow* SetupWindow(ImGuiIO& io)
     io.ConfigFlags |= ImGuiWindowFlags_NoCollapse;
     io.ConfigFlags |= ImGuiWindowFlags_NoBringToFrontOnFocus;
     io.ConfigFlags |= ImGuiWindowFlags_NoBackground;
+
+    io.LogFilename = NULL;
+    io.IniFilename = NULL;
 
     ImGui::StyleColorsDark();
     ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1, 1));
