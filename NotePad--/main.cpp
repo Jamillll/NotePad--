@@ -62,7 +62,6 @@ int main(int argc, char* argv[])
         ImGui::InputTextMultiline("##Contents", &contents, ImVec2(io.DisplaySize.x, io.DisplaySize.y - 20));
         ImGui::End();
 
-
         if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) && glfwGetKey(window, GLFW_KEY_S))
         {
             file.CommitContent(contents);
