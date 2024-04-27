@@ -6,6 +6,8 @@ class TextManager
 {
 private:
 	TextFile* m_TextFile = nullptr;
+	bool m_IsEdited = false;
+	std::string m_OriginalContent;
 
 public:
 	std::string m_Content;
@@ -14,6 +16,8 @@ public:
 	TextManager();
 
 	std::string GetFileName();
+
+	bool IsEdited();
 
 	void OpenFile(TextFile* inputFile);
 	void OpenFile(GLFWwindow* window);

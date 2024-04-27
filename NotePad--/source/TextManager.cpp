@@ -12,6 +12,7 @@ TextManager::TextManager(TextFile* inputFile)
 {
 	m_TextFile = inputFile;
 	m_Content = m_TextFile->GetContent();
+	m_OriginalContent = m_TextFile->GetContent();
 }
 
 TextManager::TextManager()
@@ -37,10 +38,17 @@ std::string TextManager::GetFileName()
 	return strings[strings.size() - 1];
 }
 
+bool TextManager::IsEdited()
+{
+	return m_Content != m_OriginalContent;
+	;
+}
+
 void TextManager::OpenFile(TextFile* inputFile)
 {
 	m_TextFile = inputFile;
 	m_Content = m_TextFile->GetContent();
+	m_OriginalContent = m_TextFile->GetContent();
 }
 
 void TextManager::OpenFile(GLFWwindow* window)
@@ -63,7 +71,7 @@ void TextManager::OpenFile(GLFWwindow* window)
 	{
 		m_TextFile = new TextFile(ofn.lpstrFile);
 		m_Content = m_TextFile->GetContent();
-		m_TextFile->GetContent();
+		m_OriginalContent = m_TextFile->GetContent();
 	}
 }
 
@@ -72,6 +80,7 @@ void TextManager::SaveFile(GLFWwindow* window)
 	if (m_TextFile != nullptr)
 	{
 		m_TextFile->CommitContent(&m_Content);
+		m_OriginalContent = m_Content;
 	}
 	else
 	{
@@ -95,6 +104,7 @@ void TextManager::SaveFile(GLFWwindow* window)
 		{
 			m_TextFile = new TextFile(ofn.lpstrFile);
 			m_TextFile->CommitContent(&m_Content);
+			m_OriginalContent = m_Content;
 		}
 	}
 }

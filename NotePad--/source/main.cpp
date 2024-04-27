@@ -70,9 +70,15 @@ int main(int argc, char* argv[])
 
         if (fileName.empty())
         {
-            glfwSetWindowTitle(window, "Notepad--");
+            fileName = "Notepad--";
         }
-        else glfwSetWindowTitle(window, fileName.c_str());
+
+        if (textManager.IsEdited())
+        {
+            fileName += "*";
+        }
+
+        glfwSetWindowTitle(window, fileName.c_str());
 
         // Rendering
         ImGui::Render();
