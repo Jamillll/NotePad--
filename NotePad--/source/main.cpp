@@ -7,6 +7,7 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include "imgui_stdlib.h"
+#include "SetStyle.h"
 
 GLFWwindow* SetupWindow(ImGuiIO& io); // check below main
 
@@ -31,6 +32,17 @@ int main(int argc, char* argv[])
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glfwPollEvents();
 
+        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) && glfwGetKey(window, GLFW_KEY_S))
+        {
+            textManager.SaveFile(window);
+        }
+
+        //if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) && glfwGetKey(window, GLFW_KEY_ENTER))
+        //{
+        //    textManager.OpenFile(window);
+        //    textManager.m_Content;
+        //}
+
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
@@ -40,13 +52,19 @@ int main(int argc, char* argv[])
         ImGui::SetNextWindowPos(ImVec2(0, 0));
 
         ImGui::Begin("Notepad--", nullptr, io.ConfigFlags);
-        ImGui::InputTextMultiline("##Contents", &textManager.m_Content, ImVec2(io.DisplaySize.x, io.DisplaySize.y - 20));
-        ImGui::End();
 
-        if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) && glfwGetKey(window, GLFW_KEY_S))
+        if (ImGui::Button("Open"))
         {
-            textManager.SaveContent(window);
+            textManager.OpenFile(window);
         }
+        ImGui::SameLine();
+        if (ImGui::Button("Save"))
+        {
+            textManager.SaveFile(window);
+        }
+
+        ImGui::InputTextMultiline("##Contents", &textManager.m_Content, ImVec2(io.DisplaySize.x, io.DisplaySize.y - 39));
+        ImGui::End();
 
         std::string fileName = textManager.GetFileName();
 
@@ -91,7 +109,7 @@ GLFWwindow* SetupWindow(ImGuiIO& io)
     io.LogFilename = NULL;
     io.IniFilename = NULL;
 
-    ImGui::StyleColorsDark();
+    DarkStyle();
     ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1, 1));
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);

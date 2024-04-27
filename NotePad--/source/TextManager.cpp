@@ -16,6 +16,7 @@ TextManager::TextManager(TextFile* inputFile)
 
 TextManager::TextManager()
 {
+
 }
 
 std::string TextManager::GetFileName()
@@ -42,7 +43,31 @@ void TextManager::OpenFile(TextFile* inputFile)
 	m_Content = m_TextFile->GetContent();
 }
 
-void TextManager::SaveContent(GLFWwindow* window)
+void TextManager::OpenFile(GLFWwindow* window)
+{
+	OPENFILENAMEA ofn;
+	CHAR szFile[260] = { 0 };
+	CHAR currentDir[256] = { 0 };
+	ZeroMemory(&ofn, sizeof(OPENFILENAME));
+	ofn.lStructSize = sizeof(OPENFILENAME);
+	ofn.hwndOwner = glfwGetWin32Window(window);
+	ofn.lpstrFile = szFile;
+	ofn.nMaxFile = sizeof(szFile);
+	if (GetCurrentDirectoryA(256, currentDir))
+		ofn.lpstrInitialDir = currentDir;
+	ofn.lpstrFilter = "Text File (*.txt)\0*.txt\0";
+	ofn.nFilterIndex = 1;
+	ofn.Flags = OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT | OFN_NOCHANGEDIR;
+
+	if (GetOpenFileNameA(&ofn) == true)
+	{
+		m_TextFile = new TextFile(ofn.lpstrFile);
+		m_Content = m_TextFile->GetContent();
+		m_TextFile->GetContent();
+	}
+}
+
+void TextManager::SaveFile(GLFWwindow* window)
 {
 	if (m_TextFile != nullptr)
 	{

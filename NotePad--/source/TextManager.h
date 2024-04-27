@@ -16,7 +16,8 @@ public:
 	std::string GetFileName();
 
 	void OpenFile(TextFile* inputFile);
-	void SaveContent(GLFWwindow* window);
+	void OpenFile(GLFWwindow* window);
+	void SaveFile(GLFWwindow* window);
 
 	~TextManager();
 };
