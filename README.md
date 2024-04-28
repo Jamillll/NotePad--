@@ -12,8 +12,7 @@ On top of that I want to use this as an opportunity to both make this a fully fe
 - Set up a testing framework
 - Design a logo and impliment it in the main window
 - Zoom font size in and out with controll and scroll wheel
-- add '*' at the end of file name in window title if the changes made to the text file aren't saved
-- Text wrapping in Multiline text input
+put open and save buttons in am ImGUI menubar instead of just having them as buttons
 
 ### Known issues
 - Ctrl + O shortcut won't work (and commented out right now) most of the time due to ImGui Multiline text input not updating its own internal buffer while focused, it would only work if the text field was out of focus
