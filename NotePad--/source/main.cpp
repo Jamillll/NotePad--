@@ -27,11 +27,12 @@ int main(int argc, char* argv[])
         textManager.OpenFile(file);
     }
 
-    while (!glfwWindowShouldClose(window))
+    while (true)
     {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glfwPollEvents();
 
+        // Save Shortcut
         if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) && glfwGetKey(window, GLFW_KEY_S))
         {
             textManager.SaveFile(window);
@@ -47,12 +48,11 @@ int main(int argc, char* argv[])
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-
         ImGui::SetNextWindowSize(ImVec2(io.DisplaySize.x, io.DisplaySize.y));
         ImGui::SetNextWindowPos(ImVec2(0, 0));
 
+        // Main Window
         ImGui::Begin("Notepad--", nullptr, io.ConfigFlags);
-
         if (ImGui::Button("Open"))
         {
             textManager.OpenFile(window);
@@ -62,23 +62,42 @@ int main(int argc, char* argv[])
         {
             textManager.SaveFile(window);
         }
-
         ImGui::InputTextMultiline("##Contents", &textManager.m_Content, ImVec2(io.DisplaySize.x, io.DisplaySize.y - 39));
         ImGui::End();
 
+        // Set window title appropriately
         std::string fileName = textManager.GetFileName();
-
+        bool isEdited = textManager.IsEdited();
         if (fileName.empty())
         {
             fileName = "Notepad--";
         }
-
-        if (textManager.IsEdited())
+        if (isEdited)
         {
             fileName += "*";
         }
-
         glfwSetWindowTitle(window, fileName.c_str());
+
+        // handle user closing window
+        if (glfwWindowShouldClose(window))
+        {
+            if (!isEdited)
+            {
+                goto closeWindow;
+            }
+
+            ImGui::Begin("Warning");
+            ImGui::Text("Are you sure you want to close without saving?");
+            if (ImGui::Button("Yes"))
+            {
+                goto closeWindow;
+            }
+            if (ImGui::Button("No"))
+            {
+                glfwSetWindowShouldClose(window, false);
+            }
+            ImGui::End();
+        }
 
         // Rendering
         ImGui::Render();
@@ -87,6 +106,7 @@ int main(int argc, char* argv[])
         glfwSwapBuffers(window);
     }
 
+closeWindow:
     glfwTerminate();
     return 0;
 }
@@ -106,6 +126,7 @@ GLFWwindow* SetupWindow(ImGuiIO& io)
     glfwMakeContextCurrent(window);
 
     io.ConfigFlags |= ImGuiWindowFlags_NoTitleBar;
+    //io.ConfigFlags |= ImGuiWindowFlags_MenuBar;
     io.ConfigFlags |= ImGuiWindowFlags_NoMove;
     io.ConfigFlags |= ImGuiWindowFlags_NoResize;
     io.ConfigFlags |= ImGuiWindowFlags_NoCollapse;
