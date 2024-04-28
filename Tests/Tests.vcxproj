@@ -130,6 +130,13 @@
   <ItemGroup>
     <ClCompile Include="Source\main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vendor\catch2\catch.hpp" />
+    <ClInclude Include="Vendor\catch2\catch_reporter_automake.hpp" />
+    <ClInclude Include="Vendor\catch2\catch_reporter_sonarqube.hpp" />
+    <ClInclude Include="Vendor\catch2\catch_reporter_tap.hpp" />
+    <ClInclude Include="Vendor\catch2\catch_reporter_teamcity.hpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

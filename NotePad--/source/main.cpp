@@ -1,7 +1,7 @@
 #include <iostream>
 #include <GLFW/glfw3.h>
-#include "TextFile.h"
-#include "TextManager.h"
+#include "TextLibrary/TextFile.h"
+#include "TextLibrary/TextManager.h"
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -19,11 +19,11 @@ int main(int argc, char* argv[])
 
     if (window == nullptr) return -1;
 
-    TextManager textManager;
+    TextLibrary::TextManager textManager;
 
     if (argc == 2)
     {
-        TextFile* file = new TextFile(argv[1]);
+        TextLibrary::TextFile* file = new TextLibrary::TextFile(argv[1]);
         textManager.OpenFile(file);
     }
 

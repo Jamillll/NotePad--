@@ -7,5 +7,5 @@ C:\Programs\NotePad--\NotePad--\Dependancies\ImGUI\imgui_stdlib.cpp;C:\Programs\
 C:\Programs\NotePad--\NotePad--\Dependancies\ImGUI\imgui_tables.cpp;C:\Programs\NotePad--\NotePad--\NotePad--\x64\Debug\imgui_tables.obj
 C:\Programs\NotePad--\NotePad--\Dependancies\ImGUI\imgui_widgets.cpp;C:\Programs\NotePad--\NotePad--\NotePad--\x64\Debug\imgui_widgets.obj
 C:\Programs\NotePad--\NotePad--\source\main.cpp;C:\Programs\NotePad--\NotePad--\NotePad--\x64\Debug\main.obj
-C:\Programs\NotePad--\NotePad--\source\TextFile.cpp;C:\Programs\NotePad--\NotePad--\NotePad--\x64\Debug\TextFile.obj
-C:\Programs\NotePad--\NotePad--\source\TextManager.cpp;C:\Programs\NotePad--\NotePad--\NotePad--\x64\Debug\TextManager.obj
+C:\Programs\NotePad--\NotePad--\source\TextLibrary\TextFile.cpp;C:\Programs\NotePad--\NotePad--\NotePad--\x64\Debug\TextFile.obj
+C:\Programs\NotePad--\NotePad--\source\TextLibrary\TextManager.cpp;C:\Programs\NotePad--\NotePad--\NotePad--\x64\Debug\TextManager.obj
