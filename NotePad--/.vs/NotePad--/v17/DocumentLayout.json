@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Programs\\NotePad--\\NotePad--\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{378ACA8D-991D-4AE7-A317-AF3C982AA52D}|..\\Tests\\Tests.vcxproj|C:\\Programs\\NotePad--\\Tests\\Source\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\source\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:source\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -38,17 +41,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\source\\main.cpp",
               "RelativeDocumentMoniker": "source\\main.cpp",
               "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\source\\main.cpp",
               "RelativeToolTip": "source\\main.cpp",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAcwGIAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-26T00:30:30.474Z",
               "IsPinned": true,
@@ -60,7 +63,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Programs\\NotePad--\\Tests\\Source\\main.cpp",
+              "RelativeDocumentMoniker": "..\\Tests\\Source\\main.cpp",
+              "ToolTip": "C:\\Programs\\NotePad--\\Tests\\Source\\main.cpp",
+              "RelativeToolTip": "..\\Tests\\Source\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-28T21:46:42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "imgui_widgets.cpp",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Dependancies\\ImGUI\\imgui_widgets.cpp",
               "RelativeDocumentMoniker": "Dependancies\\ImGUI\\imgui_widgets.cpp",
@@ -72,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "imgui_demo.cpp",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Dependancies\\ImGUI\\imgui_demo.cpp",
               "RelativeDocumentMoniker": "Dependancies\\ImGUI\\imgui_demo.cpp",
@@ -84,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TextManager.h",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\source\\TextManager.h",
               "RelativeDocumentMoniker": "source\\TextManager.h",
@@ -96,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TextManager.cpp",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\source\\TextManager.cpp",
               "RelativeDocumentMoniker": "source\\TextManager.cpp",
@@ -108,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TextFile.h",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\source\\TextFile.h",
               "RelativeDocumentMoniker": "source\\TextFile.h",
@@ -120,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TextFile.cpp",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\source\\TextFile.cpp",
               "RelativeDocumentMoniker": "source\\TextFile.cpp",
