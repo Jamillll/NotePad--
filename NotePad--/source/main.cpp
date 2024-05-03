@@ -18,8 +18,7 @@ int main(int argc, char* argv[])
 
     if (argc == 2)
     {
-        TextLibrary::TextFile* file = new TextLibrary::TextFile(argv[1]);
-        textManager.OpenFile(file);
+        textManager.OpenFile(argv[1]);
     }
 
     while (true)
@@ -86,17 +85,15 @@ int main(int argc, char* argv[])
                 goto closeWindow;
             }
 
-            ImGui::Begin("Warning");
-            ImGui::Text("Are you sure you want to close without saving?");
-            if (ImGui::Button("Yes"))
+            bool confirmClose = false;
+            if (myGui.WarningWindow("Are you sure you want to close without saving?", &confirmClose))
             {
-                goto closeWindow;
+                if (confirmClose)
+                {
+                    goto closeWindow;
+                }
+                else glfwSetWindowShouldClose(window, false);
             }
-            if (ImGui::Button("No"))
-            {
-                glfwSetWindowShouldClose(window, false);
-            }
-            ImGui::End();
         }
 
         // Rendering

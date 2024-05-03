@@ -100,6 +100,36 @@ std::string MyGui::OpenFileDialog()
 	return "";
 }
 
+// Returns true if the user has selected Yes or No and the warning has been resolved, else it will return false
+bool MyGui::WarningWindow(std::string warningMessage, bool* userInput)
+{
+	bool warningResolved = false;
+
+	ImGui::Begin("Warning");
+	ImGui::Text(warningMessage.c_str());
+	if (ImGui::Button("Yes"))
+	{
+		*userInput = true;
+		warningResolved = true;
+	}
+	ImGui::SameLine();
+	if (ImGui::Button("No"))
+	{
+		*userInput = false;
+		warningResolved = true;
+	}
+	ImGui::End();
+
+	return warningResolved;
+}
+
+void MyGui::ErrorWindow(std::string errorMessage)
+{
+	ImGui::Begin("Error!");
+	ImGui::Text(errorMessage.c_str());
+	ImGui::End();
+}
+
 ImGuiIO& MyGui::GetIO()
 {
 	return ImGui::GetIO();

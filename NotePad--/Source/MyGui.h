@@ -18,6 +18,9 @@ public:
 	std::string SaveFileDialog();
 	std::string OpenFileDialog();
 
+	bool WarningWindow(std::string warningMessage, bool* userInput);
+	void ErrorWindow(std::string errorMessage);
+
 	ImGuiIO& GetIO();
 
 private:
