@@ -142,6 +142,7 @@
     <ClCompile Include="Dependancies\ImGUI\imgui_tables.cpp" />
     <ClCompile Include="Dependancies\ImGUI\imgui_widgets.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="Source\MyGui.cpp" />
     <ClCompile Include="source\TextLibrary\TextFile.cpp" />
     <ClCompile Include="source\TextLibrary\TextManager.cpp" />
   </ItemGroup>
@@ -158,6 +159,7 @@
     <ClInclude Include="Dependancies\ImGUI\imstb_rectpack.h" />
     <ClInclude Include="Dependancies\ImGUI\imstb_textedit.h" />
     <ClInclude Include="Dependancies\ImGUI\imstb_truetype.h" />
+    <ClInclude Include="Source\MyGui.h" />
     <ClInclude Include="source\SetStyle.h" />
     <ClInclude Include="source\TextLibrary\TextFile.h" />
     <ClInclude Include="source\TextLibrary\TextManager.h" />

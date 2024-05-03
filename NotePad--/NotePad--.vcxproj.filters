@@ -48,6 +48,9 @@
     <ClCompile Include="source\TextLibrary\TextManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\MyGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dependancies\GLFW\include\GLFW\glfw3.h">
@@ -93,6 +96,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\TextLibrary\TextManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MyGui.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

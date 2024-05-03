@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\Vendor\catch2\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\Vendor\catch2\;$(SolutionDir)Source\TextLibrary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,6 +129,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Vendor\TextLibrary\TextFile.cpp" />
+    <ClCompile Include="Vendor\TextLibrary\TextManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vendor\catch2\catch.hpp" />
@@ -136,6 +138,8 @@
     <ClInclude Include="Vendor\catch2\catch_reporter_sonarqube.hpp" />
     <ClInclude Include="Vendor\catch2\catch_reporter_tap.hpp" />
     <ClInclude Include="Vendor\catch2\catch_reporter_teamcity.hpp" />
+    <ClInclude Include="Vendor\TextLibrary\TextFile.h" />
+    <ClInclude Include="Vendor\TextLibrary\TextManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

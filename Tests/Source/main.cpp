@@ -1,5 +1,7 @@
 #define CATCH_CONFIG_RUNNER 
 #include "catch.hpp"
+#include "C:\Programs\NotePad--\NotePad--\source\TextLibrary\TextFile.h"
+
 #include <iostream>
 
 int main(int argc, char* const argv[]) {
@@ -10,13 +12,11 @@ int main(int argc, char* const argv[]) {
     return result;
 }
 
-unsigned int Factorial(unsigned int number) {
-    return number <= 1 ? number : Factorial(number - 1) * number;
-}
+TEST_CASE("idk man just testing rn") 
+{
+    using namespace TextLibrary;
 
-TEST_CASE("Factorials are computed", "[factorial]") {
-    REQUIRE(Factorial(1) == 1);
-    REQUIRE(Factorial(2) == 2);
-    REQUIRE(Factorial(3) == 6);
-    REQUIRE(Factorial(10) == 3628800);
+    TextFile file(".\TestContent.txt");
+
+    REQUIRE(file.GetPath() == ".\TestContent.txt");
 }

@@ -2,20 +2,15 @@
 #include <GLFW/glfw3.h>
 #include "TextLibrary/TextFile.h"
 #include "TextLibrary/TextManager.h"
+#include "MyGui.h"
 
-#include "imgui.h"
-#include "imgui_impl_glfw.h"
-#include "imgui_impl_opengl3.h"
-#include "imgui_stdlib.h"
-#include "SetStyle.h"
-
-GLFWwindow* SetupWindow(ImGuiIO& io); // check below main
+GLFWwindow* SetupWindow(); // check below main
 
 int main(int argc, char* argv[])
 {
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO();
-    GLFWwindow* window = SetupWindow(io);
+    GLFWwindow* window = SetupWindow();
+    MyGui myGui(window);
+    ImGuiIO& io = myGui.GetIO();
 
     if (window == nullptr) return -1;
 
@@ -45,13 +40,12 @@ int main(int argc, char* argv[])
         //}
 
         // Start the Dear ImGui frame
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
+        myGui.StartFrame();
+
+        // Main Window
         ImGui::SetNextWindowSize(ImVec2(io.DisplaySize.x, io.DisplaySize.y));
         ImGui::SetNextWindowPos(ImVec2(0, 0));
 
-        // Main Window
         ImGui::Begin("Notepad--", nullptr, io.ConfigFlags);
         if (ImGui::Button("Open"))
         {
@@ -100,8 +94,7 @@ int main(int argc, char* argv[])
         }
 
         // Rendering
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        myGui.Render();
 
         glfwSwapBuffers(window);
     }
@@ -111,7 +104,7 @@ closeWindow:
     return 0;
 }
 
-GLFWwindow* SetupWindow(ImGuiIO& io)
+GLFWwindow* SetupWindow()
 {
     if (!glfwInit())
         return nullptr;
@@ -124,23 +117,6 @@ GLFWwindow* SetupWindow(ImGuiIO& io)
     }
 
     glfwMakeContextCurrent(window);
-
-    io.ConfigFlags |= ImGuiWindowFlags_NoTitleBar;
-    //io.ConfigFlags |= ImGuiWindowFlags_MenuBar;
-    io.ConfigFlags |= ImGuiWindowFlags_NoMove;
-    io.ConfigFlags |= ImGuiWindowFlags_NoResize;
-    io.ConfigFlags |= ImGuiWindowFlags_NoCollapse;
-    io.ConfigFlags |= ImGuiWindowFlags_NoBringToFrontOnFocus;
-    io.ConfigFlags |= ImGuiWindowFlags_NoBackground;
-
-    io.LogFilename = NULL;
-    io.IniFilename = NULL;
-
-    DarkStyle();
-    ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1, 1));
-
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 330");
 
     return window;
 }
