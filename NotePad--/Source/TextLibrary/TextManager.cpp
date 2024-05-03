@@ -3,11 +3,6 @@
 #include <sstream>
 #include <vector>
 
-#include <windows.h>
-#include <commdlg.h>
-#define GLFW_EXPOSE_NATIVE_WIN32
-#include <GLFW/glfw3native.h>
-
 namespace TextLibrary
 {
 	TextManager::TextManager(TextFile* inputFile)
@@ -43,72 +38,30 @@ namespace TextLibrary
 	bool TextManager::IsEdited()
 	{
 		return m_Content != m_OriginalContent;
-		;
 	}
 
-	void TextManager::OpenFile(TextFile* inputFile)
+	void TextManager::OpenFile(std::string inputFilePath)
 	{
-		m_TextFile = inputFile;
+		m_TextFile = new TextFile(inputFilePath);
 		m_Content = m_TextFile->GetContent();
 		m_OriginalContent = m_TextFile->GetContent();
 	}
 
-	void TextManager::OpenFile(GLFWwindow* window)
+	bool TextManager::SaveFile()
 	{
-		OPENFILENAMEA ofn;
-		CHAR szFile[260] = { 0 };
-		CHAR currentDir[256] = { 0 };
-		ZeroMemory(&ofn, sizeof(OPENFILENAME));
-		ofn.lStructSize = sizeof(OPENFILENAME);
-		ofn.hwndOwner = glfwGetWin32Window(window);
-		ofn.lpstrFile = szFile;
-		ofn.nMaxFile = sizeof(szFile);
-		if (GetCurrentDirectoryA(256, currentDir))
-			ofn.lpstrInitialDir = currentDir;
-		ofn.lpstrFilter = "Text File (*.txt)\0*.txt\0";
-		ofn.nFilterIndex = 1;
-		ofn.Flags = OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT | OFN_NOCHANGEDIR;
+		if (m_TextFile == nullptr) return false;
 
-		if (GetOpenFileNameA(&ofn) == true)
-		{
-			m_TextFile = new TextFile(ofn.lpstrFile);
-			m_Content = m_TextFile->GetContent();
-			m_OriginalContent = m_TextFile->GetContent();
-		}
+		m_TextFile->CommitContent(&m_Content);
+		m_OriginalContent = m_Content;
+
+		return true;
 	}
 
-	void TextManager::SaveFile(GLFWwindow* window)
+	void TextManager::SaveAsFile(std::string inputFilePath)
 	{
-		if (m_TextFile != nullptr)
-		{
-			m_TextFile->CommitContent(&m_Content);
-			m_OriginalContent = m_Content;
-		}
-		else
-		{
-			//Windows API sorcery to summon the save dialog window
-
-			OPENFILENAMEA ofn;
-			CHAR szFile[260] = { 0 };
-			CHAR currentDir[256] = { 0 };
-			ZeroMemory(&ofn, sizeof(OPENFILENAME));
-			ofn.lStructSize = sizeof(OPENFILENAME);
-			ofn.hwndOwner = glfwGetWin32Window(window);
-			ofn.lpstrFile = szFile;
-			ofn.nMaxFile = sizeof(szFile);
-			if (GetCurrentDirectoryA(256, currentDir))
-				ofn.lpstrInitialDir = currentDir;
-			ofn.lpstrFilter = "Text File (*.txt)\0*.txt\0";
-			ofn.nFilterIndex = 1;
-			ofn.Flags = OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT | OFN_NOCHANGEDIR;
-
-			if (GetSaveFileNameA(&ofn) == true)
-			{
-				m_TextFile = new TextFile(ofn.lpstrFile);
-				m_TextFile->CommitContent(&m_Content);
-				m_OriginalContent = m_Content;
-			}
-		}
+		m_TextFile = new TextFile(inputFilePath);
+		m_TextFile->CommitContent(&m_Content);
+		m_OriginalContent = m_Content;
 	}
 
 	TextManager::~TextManager()

@@ -1,6 +1,5 @@
 #pragma once
 #include "TextFile.h"
-#include <GLFW/glfw3.h>
 
 namespace TextLibrary
 {
@@ -21,9 +20,10 @@ namespace TextLibrary
 
 		bool IsEdited();
 
-		void OpenFile(TextFile* inputFile);
-		void OpenFile(GLFWwindow* window);
-		void SaveFile(GLFWwindow* window);
+		void OpenFile(std::string inputFilePath);
+
+		bool SaveFile();
+		void SaveAsFile(std::string inputFilePath);
 
 		~TextManager();
 	};

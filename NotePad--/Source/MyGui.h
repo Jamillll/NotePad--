@@ -5,12 +5,18 @@
 
 class MyGui
 {
+private:
+	GLFWwindow* m_Window = nullptr;
+
 public:
 	MyGui(GLFWwindow* window);
 	~MyGui();
 
 	void StartFrame();
 	void Render();
+
+	std::string SaveFileDialog();
+	std::string OpenFileDialog();
 
 	ImGuiIO& GetIO();
 

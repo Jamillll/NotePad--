@@ -2,10 +2,17 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
+#include <windows.h>
+#include <commdlg.h>
+#define GLFW_EXPOSE_NATIVE_WIN32
+#include <GLFW/glfw3native.h>
+
 MyGui::MyGui(GLFWwindow* window)
 {
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO();
+
+	m_Window = window;
 
 	io.ConfigFlags |= ImGuiWindowFlags_NoTitleBar;
 	//io.ConfigFlags |= ImGuiWindowFlags_MenuBar;
@@ -21,7 +28,7 @@ MyGui::MyGui(GLFWwindow* window)
 	SetDarkStyle();
 	ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(1, 1));
 
-	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplGlfw_InitForOpenGL(m_Window, true);
 	ImGui_ImplOpenGL3_Init("#version 330");
 }
 
@@ -41,6 +48,56 @@ void MyGui::Render()
 {
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+}
+
+std::string MyGui::SaveFileDialog()
+{
+	//Windows API sorcery to summon the save dialog window
+
+	OPENFILENAMEA ofn;
+	CHAR szFile[260] = { 0 };
+	CHAR currentDir[256] = { 0 };
+	ZeroMemory(&ofn, sizeof(OPENFILENAME));
+	ofn.lStructSize = sizeof(OPENFILENAME);
+	ofn.hwndOwner = glfwGetWin32Window(m_Window);
+	ofn.lpstrFile = szFile;
+	ofn.nMaxFile = sizeof(szFile);
+	if (GetCurrentDirectoryA(256, currentDir))
+		ofn.lpstrInitialDir = currentDir;
+	ofn.lpstrFilter = "Text File (*.txt)\0*.txt\0";
+	ofn.nFilterIndex = 1;
+	ofn.Flags = OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT | OFN_NOCHANGEDIR;
+
+	if (GetSaveFileNameA(&ofn) == true)
+	{
+		return ofn.lpstrFile;
+	}
+
+	return "";
+}
+
+std::string MyGui::OpenFileDialog()
+{
+	OPENFILENAMEA ofn;
+	CHAR szFile[260] = { 0 };
+	CHAR currentDir[256] = { 0 };
+	ZeroMemory(&ofn, sizeof(OPENFILENAME));
+	ofn.lStructSize = sizeof(OPENFILENAME);
+	ofn.hwndOwner = glfwGetWin32Window(m_Window);
+	ofn.lpstrFile = szFile;
+	ofn.nMaxFile = sizeof(szFile);
+	if (GetCurrentDirectoryA(256, currentDir))
+		ofn.lpstrInitialDir = currentDir;
+	ofn.lpstrFilter = "Text File (*.txt)\0*.txt\0";
+	ofn.nFilterIndex = 1;
+	ofn.Flags = OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT | OFN_NOCHANGEDIR;
+
+	if (GetOpenFileNameA(&ofn) == true)
+	{
+		return ofn.lpstrFile;
+	}
+
+	return "";
 }
 
 ImGuiIO& MyGui::GetIO()

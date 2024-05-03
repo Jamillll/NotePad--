@@ -30,7 +30,10 @@ int main(int argc, char* argv[])
         // Save Shortcut
         if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) && glfwGetKey(window, GLFW_KEY_S))
         {
-            textManager.SaveFile(window);
+            if (textManager.SaveFile() == false)
+            {
+                textManager.SaveAsFile(myGui.SaveFileDialog());
+            }
         }
 
         //if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) && glfwGetKey(window, GLFW_KEY_ENTER))
@@ -49,12 +52,15 @@ int main(int argc, char* argv[])
         ImGui::Begin("Notepad--", nullptr, io.ConfigFlags);
         if (ImGui::Button("Open"))
         {
-            textManager.OpenFile(window);
+            textManager.OpenFile(myGui.OpenFileDialog());
         }
         ImGui::SameLine();
         if (ImGui::Button("Save"))
         {
-            textManager.SaveFile(window);
+            if (textManager.SaveFile() == false)
+            {
+                textManager.SaveAsFile(myGui.SaveFileDialog());
+            }
         }
         ImGui::InputTextMultiline("##Contents", &textManager.m_Content, ImVec2(io.DisplaySize.x, io.DisplaySize.y - 39));
         ImGui::End();
