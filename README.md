@@ -9,10 +9,12 @@ On top of that I want to use this as an opportunity to both make this a fully fe
 
 ## TODO
 ### Features to impliment
+- Set up functionality in MyGui for showing error messages to user
 - Set up a testing framework
 - Design a logo and impliment it in the main window
 - Zoom font size in and out with controll and scroll wheel
-put open and save buttons in am ImGUI menubar instead of just having them as buttons
+- put open and save buttons in am ImGUI menubar instead of just having them as buttons
 
 ### Known issues
 - Ctrl + O shortcut won't work (and commented out right now) most of the time due to ImGui Multiline text input not updating its own internal buffer while focused, it would only work if the text field was out of focus
+- Crashes if the user opens up the windows file dialog but cancels out of the menu, making it return an empty string
