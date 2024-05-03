@@ -3,28 +3,18 @@
   "WorkspaceRootPath": "C:\\Programs\\NotePad--\\NotePad--\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\Source\\MyGui.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:Source\\MyGui.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{378ACA8D-991D-4AE7-A317-AF3C982AA52D}|..\\Tests\\Tests.vcxproj|C:\\Programs\\NotePad--\\Tests\\Source\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\Source\\MyGui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:Source\\MyGui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Programs\\NotePad--\\Tests\\TestContent.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\source\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:source\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\SOURCE\\TEXTLIBRARY\\TEXTFILE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:SOURCE\\TEXTLIBRARY\\TEXTFILE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\source\\TextLibrary\\TextManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:source\\TextLibrary\\TextManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\source\\TextLibrary\\TextManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:source\\TextLibrary\\TextManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\source\\SetStyle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:source\\SetStyle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|C:\\Programs\\NotePad--\\NotePad--\\SOURCE\\TEXTLIBRARY\\TEXTMANAGER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{232772DD-46F2-4CFD-B41B-05368459A4BC}|NotePad--.vcxproj|solutionrelative:SOURCE\\TEXTLIBRARY\\TEXTMANAGER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,19 +24,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Source\\main.cpp",
-              "RelativeDocumentMoniker": "Source\\main.cpp",
-              "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\Source\\main.cpp",
-              "RelativeToolTip": "Source\\main.cpp",
-              "ViewState": "AQIAAEsAAAAAAAAAAAArwF0AAAARAAAA",
+              "DocumentMoniker": "C:\\Programs\\NotePad--\\Tests\\Source\\main.cpp",
+              "RelativeDocumentMoniker": "..\\Tests\\Source\\main.cpp",
+              "ToolTip": "C:\\Programs\\NotePad--\\Tests\\Source\\main.cpp",
+              "RelativeToolTip": "..\\Tests\\Source\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-01T18:12:31.85Z",
+              "WhenOpened": "2024-05-03T19:07:07.86Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -56,66 +46,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MyGui.h",
-              "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Source\\MyGui.h",
-              "RelativeDocumentMoniker": "Source\\MyGui.h",
-              "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\Source\\MyGui.h",
-              "RelativeToolTip": "Source\\MyGui.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "DocumentIndex": 2,
+              "Title": "TextFile.h",
+              "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Source\\TextLibrary\\TextFile.h",
+              "RelativeDocumentMoniker": "Source\\TextLibrary\\TextFile.h",
+              "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\Source\\TextLibrary\\TextFile.h",
+              "RelativeToolTip": "Source\\TextLibrary\\TextFile.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-03T14:13:20.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T19:35:57.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MyGui.cpp",
-              "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Source\\MyGui.cpp",
-              "RelativeDocumentMoniker": "Source\\MyGui.cpp",
-              "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\Source\\MyGui.cpp",
-              "RelativeToolTip": "Source\\MyGui.cpp",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAAAHIAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-03T14:14:21.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SetStyle.h",
-              "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Source\\SetStyle.h",
-              "RelativeDocumentMoniker": "Source\\SetStyle.h",
-              "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\Source\\SetStyle.h",
-              "RelativeToolTip": "Source\\SetStyle.h",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAFUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-03T14:13:51.022Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TextManager.h",
               "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Source\\TextLibrary\\TextManager.h",
               "RelativeDocumentMoniker": "Source\\TextLibrary\\TextManager.h",
               "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\Source\\TextLibrary\\TextManager.h",
               "RelativeToolTip": "Source\\TextLibrary\\TextManager.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-01T18:40:43.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T19:35:52.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TextManager.cpp",
-              "DocumentMoniker": "C:\\Programs\\NotePad--\\NotePad--\\Source\\TextLibrary\\TextManager.cpp",
-              "RelativeDocumentMoniker": "Source\\TextLibrary\\TextManager.cpp",
-              "ToolTip": "C:\\Programs\\NotePad--\\NotePad--\\Source\\TextLibrary\\TextManager.cpp",
-              "RelativeToolTip": "Source\\TextLibrary\\TextManager.cpp",
-              "ViewState": "AQIAABgAAAAAAAAAAAArwCsAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-01T18:40:44.003Z",
+              "DocumentIndex": 1,
+              "Title": "TestContent.txt",
+              "DocumentMoniker": "C:\\Programs\\NotePad--\\Tests\\TestContent.txt",
+              "RelativeDocumentMoniker": "..\\Tests\\TestContent.txt",
+              "ToolTip": "C:\\Programs\\NotePad--\\Tests\\TestContent.txt",
+              "RelativeToolTip": "..\\Tests\\TestContent.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-05-03T19:08:34.358Z",
               "EditorCaption": ""
             }
           ]

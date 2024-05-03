@@ -1,9 +1,1 @@
-﻿  MyGui.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-  (compiling source file 'Source/MyGui.cpp')
-  C:\Programs\NotePad--\NotePad--\Dependancies\GLFW\include\GLFW\glfw3.h(123,1):
-  see previous definition of 'APIENTRY'
-  
-C:\Programs\NotePad--\NotePad--\Source\MyGui.cpp(71,32): warning C4805: '==': unsafe mix of type 'BOOL' and type 'bool' in operation
-C:\Programs\NotePad--\NotePad--\Source\MyGui.cpp(95,32): warning C4805: '==': unsafe mix of type 'BOOL' and type 'bool' in operation
-  NotePad--.vcxproj -> C:\Programs\NotePad--\NotePad--\x64\Debug\NotePad--.exe
+﻿

@@ -18,12 +18,6 @@
     <ClCompile Include="Source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vendor\TextLibrary\TextFile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vendor\TextLibrary\TextManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vendor\catch2\catch.hpp">
@@ -41,10 +35,10 @@
     <ClInclude Include="Vendor\catch2\catch_reporter_teamcity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vendor\TextLibrary\TextFile.h">
+    <ClInclude Include="Source\TextLibrary\TextFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vendor\TextLibrary\TextManager.h">
+    <ClInclude Include="Source\TextLibrary\TextManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

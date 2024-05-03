@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_RUNNER 
 #include "catch.hpp"
-#include "C:\Programs\NotePad--\NotePad--\source\TextLibrary\TextFile.h"
+#include "TextFile.h"
 
 #include <iostream>
 
@@ -16,7 +16,7 @@ TEST_CASE("idk man just testing rn")
 {
     using namespace TextLibrary;
 
-    TextFile file(".\TestContent.txt");
+    TextFile file("C:\\Programs\\NotePad--\\Tests\\TestContent.txt");
 
-    REQUIRE(file.GetPath() == ".\TestContent.txt");
+    REQUIRE(file.GetPath() == "C:\\Programs\\NotePad--\\Tests\\TestContent.txt");
 }
