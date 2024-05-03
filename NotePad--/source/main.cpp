@@ -61,6 +61,7 @@ int main(int argc, char* argv[])
                 textManager.SaveAsFile(myGui.SaveFileDialog());
             }
         }
+
         ImGui::InputTextMultiline("##Contents", &textManager.m_Content, ImVec2(io.DisplaySize.x, io.DisplaySize.y - 39));
         ImGui::End();
 

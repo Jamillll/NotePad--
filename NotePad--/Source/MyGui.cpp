@@ -123,11 +123,25 @@ bool MyGui::WarningWindow(std::string warningMessage, bool* userInput)
 	return warningResolved;
 }
 
-void MyGui::ErrorWindow(std::string errorMessage)
+// Returns true if the user has read the message and pressed okay
+bool MyGui::ErrorWindow(std::string errorMessage)
 {
+	bool errorAcknowledged = false;
+
+	ImGui::SetNextWindowSize(ImVec2(400, 100));
+
+	ImGui::PushStyleColor(ImGuiCol_Text, {1, 0, 0, 1});
 	ImGui::Begin("Error!");
-	ImGui::Text(errorMessage.c_str());
+	ImGui::PopStyleColor();
+
+	ImGui::TextWrapped(errorMessage.c_str());
+	if (ImGui::Button("Ok"))
+	{
+		errorAcknowledged = true;
+	}
 	ImGui::End();
+
+	return errorAcknowledged;
 }
 
 ImGuiIO& MyGui::GetIO()

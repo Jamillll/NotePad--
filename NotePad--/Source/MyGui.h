@@ -19,7 +19,7 @@ public:
 	std::string OpenFileDialog();
 
 	bool WarningWindow(std::string warningMessage, bool* userInput);
-	void ErrorWindow(std::string errorMessage);
+	bool ErrorWindow(std::string errorMessage);
 
 	ImGuiIO& GetIO();
 

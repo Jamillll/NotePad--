@@ -160,7 +160,6 @@
     <ClInclude Include="Dependancies\ImGUI\imstb_textedit.h" />
     <ClInclude Include="Dependancies\ImGUI\imstb_truetype.h" />
     <ClInclude Include="Source\MyGui.h" />
-    <ClInclude Include="source\SetStyle.h" />
     <ClInclude Include="source\TextLibrary\TextFile.h" />
     <ClInclude Include="source\TextLibrary\TextManager.h" />
   </ItemGroup>
